@@ -1,0 +1,22 @@
+server:
+  port: 8060
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/payment
+    username: alibou
+    password: alibou
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: alibou
+    password: alibou
+application:
+  config:
+    shipping-url: http://localhost:8090/api/v1/shippings

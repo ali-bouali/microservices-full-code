@@ -1,0 +1,17 @@
+server:
+  port: 8222
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: http://localhost:8090/
+          predicates:
+            - Path=/api/v1/customers/**
+        - id: order-service
+          uri: http://localhost:8070/
+          predicates:
+            - Path=/api/v1/orders/**
