@@ -1,0 +1,81 @@
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres
+    environment:
+      POSTGRES_USER: alibou
+      POSTGRES_PASSWORD: alibou
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - zipkin
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.11.7-management-alpine
+    environment:
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+      RABBITMQ_DEFAULT_USER: "alibou"
+      RABBITMQ_DEFAULT_PASS: "alibou"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - rabbitmq
+  mongodb:
+    image: mongo
+    container_name: mongo_db
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=alibou
+      - MONGO_INITDB_ROOT_PASSWORD=alibou
+  mongo-express:
+    image: mongo-express
+    container_name: mongo_express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=alibou
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=alibou
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+
+networks:
+  postgres:
+    driver: bridge
+  rabbitmq:
+    driver: bridge
+  zipkin:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
+  mongo:
