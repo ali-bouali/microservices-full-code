@@ -1,0 +1,153 @@
+Microservices course
+
+Section 1 - 
+	- What you will learn in this course
+
+Section 2 - Introduction to micro services architecture
+	- What is micro services?
+	- The fundamental principles of microservices architecture
+	- The benefits of microservices architecture
+	- Microservices architecture patterns
+
+Section 3 - Application overview
+	- Presenting the future application
+
+Section 4 - Bootstrap the application
+	- Create GitHub mono-repository
+	- Create Customer ms
+	- Create Order ms
+	- Create Payment ms
+	- Create Notification ms
+	- Create docker-compose and run the containers
+	- Git commit
+
+Section 5 - Config server
+	- Why we need a config server?
+	- Create config-server project
+	- Develop the config server (maybe splitted)
+	- Add Customer-service config
+	- Git commit
+
+Section 6 - Implement Customer service
+	- Read configs from config server
+	- Create Customer entity
+	- Create Customer repository
+	- Create Customer registration dto
+	- Create customer response dto
+	- Create Customer service
+	- Create Customer controller
+	- Test
+	- Git commit
+
+Section 7 - Implement Order service
+	- Add Order config to config-server
+	- Read configs from config server
+	- Create Order entity
+	- Create Order repository
+	- Create Order registration dto
+	- Create Order response dto
+	- Create Order service
+	- Create Order controller
+	- Test
+	- Git commit
+
+Section 8 - Implement Payment service
+	- Add Payment config to config-server
+	- Read configs from config server
+	- Create Payment entity
+	- Create Payment repository
+	- Create Payment registration dto
+	- Create Payment response dto
+	- Create Payment service
+	- Create Payment controller
+	- Test
+	- Git commit
+
+Section 9 - Microservices Communication via HTTP
+	- 
+	- RestTemplates
+	- Test the communication
+	- OpenFeign
+	- Test the communication
+	- RestTemplate VS OpenFeign
+	- Git commit
+
+Section 10 - Service Discovery with Eureka
+	- What is service discovery?
+	- Why we need a service discovery
+	- Create discovery-service
+	- Externalize configuration
+	- Load externalized configuration
+	- Update all the microservices to register in the DS
+	- Run the discovery service
+	- Observe the changes
+	- Git commit
+
+Section 11 - API Gateway
+	- What is a Gateway?
+	- Why a Gateway?
+	- Create api-gateway
+	- Add routes for Customer-service
+	- Run and test the changes
+	- Exercice: Add the route for Order-service
+	- Solution
+	- Exercice: Externalize configuration
+	- Solution
+	- Load externalized configuration
+	- Git commit
+
+
+Section 12 - Exercice
+	- Establish a communication with all the microservices
+		--> should be devided and detailed
+	- Solution
+
+Section 13 - Asynchronous communication
+	- Setup RabbitMQ (docker-compose)
+	- Run RabbitMQ
+	- What is async communication?
+	- Why async?
+	- more details about rabbit mq and the diff exchange type, queue, ...
+		--> diagram
+	- Publish message to order-queue
+	- Test the changes
+	- Exercice: Follow the previous steps and publish a message on payment-queue
+	- Solution
+
+Section 14 - Play and Observe
+	- Playing with the application
+
+Section 15 - Notification service & Java mail
+	- Configure and install maildev (docker-compose)
+	- Create Notification service
+	- Configure Java-mail
+	- Add RabbitMQ consumer
+	- Consume order-queue and send email
+	- Save to the database
+	- Exercice: consume payment-queue and send email
+	- Solution
+
+Section 16 - Distributed Tracing
+	- Distributed Tracing
+	- Adding Sleuth
+	- Zipkin
+	- Zipkin Container
+	- Spring Cloud Sleuth Zipkin
+	- Zipkin Dashboard
+	- Section End Git Commit
+
+Section 17 - Distributed documentation
+	- Expose services documentation through API Gateway
+
+
+
+
+
+
+
+
+
+
+
+
+
