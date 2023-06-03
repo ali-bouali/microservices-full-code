@@ -1,0 +1,32 @@
+
+- Service Registry and Discovery (/)
+- API Gateway (/)
+- CQRS (Command Query Responsibility Segregation) (/)
+- Database per Service (/)
+- Event-driven Architecture (RabbitMQ) (/)
+- Saga Pattern (x)
+- Circuit breaker (x)
+
+
+------------------------------------------
+
+First part:
+- Spring boot in depth
+    - Theoretic introduction to the spring framework
+    - How to create a project
+    - How to connect to a database
+    - Class diagram
+    - Hibernate relationships
+    - Spring data JPA repositories
+    - Services
+    - Controllers
+    - Test the API
+    - Objects validation
+    - Test the changes
+    - Exception Handling
+    - Test the changes
+    - Unit testing (Validator, Service)
+    - E2E testing (Controller)
+    - E2E testing (postman collection, newman)
+
+
