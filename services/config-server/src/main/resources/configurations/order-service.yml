@@ -15,4 +15,4 @@ spring:
 application:
   config:
     customer-url: http://localhost:8090/api/v1/customers
-    payment-url: http://localhost:8090/api/v1/payments
+    payment-url: http://localhost:8060/api/v1/payments
