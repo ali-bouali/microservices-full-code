@@ -1,4 +1,4 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
 public enum PaymentMethod {
 

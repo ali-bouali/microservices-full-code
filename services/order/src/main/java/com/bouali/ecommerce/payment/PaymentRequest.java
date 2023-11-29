@@ -1,6 +1,6 @@
-package com.bouali.order.payment;
+package com.bouali.ecommerce.payment;
 
-import com.bouali.order.order.PaymentMethod;
+import com.bouali.ecommerce.order.PaymentMethod;
 import java.math.BigDecimal;
 
 public record PaymentRequest(

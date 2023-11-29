@@ -1,4 +1,4 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -9,8 +9,6 @@ public record OrderResponse(
     Integer id,
     String reference,
     BigDecimal amount,
-    String item,
-    double quantity,
     PaymentMethod paymentMethod,
     String customerId
 ) {

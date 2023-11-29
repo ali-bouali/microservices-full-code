@@ -1,4 +1,4 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
 import org.springframework.stereotype.Service;
 
@@ -14,9 +14,6 @@ public class OrderMapper {
         .id(request.id())
         .reference(request.reference())
         .paymentMethod(request.paymentMethod())
-        .quantity(request.quantity())
-        .amount(request.amount())
-        .item(request.item())
         .customerId(request.customerId())
         .build();
   }
@@ -25,9 +22,7 @@ public class OrderMapper {
     return new OrderResponse(
         order.getId(),
         order.getReference(),
-        order.getAmount(),
-        order.getItem(),
-        order.getQuantity(),
+        order.getTotalAmount(),
         order.getPaymentMethod(),
         order.getCustomerId()
     );

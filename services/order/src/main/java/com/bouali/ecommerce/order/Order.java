@@ -1,5 +1,6 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
+import com.bouali.ecommerce.orderline.OrderLine;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -7,9 +8,12 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,16 +38,15 @@ public class Order {
   @Column(unique = true,  nullable = false)
   private String reference;
 
-  private BigDecimal amount;
-
-  private String item;
-
-  private double quantity;
+  private BigDecimal totalAmount;
 
   @Enumerated(EnumType.STRING)
   private PaymentMethod paymentMethod;
 
   private String customerId;
+
+  @OneToMany(mappedBy = "order")
+  private List<OrderLine> orderLines;
 
   @CreatedDate
   @Column(updatable = false, nullable = false)

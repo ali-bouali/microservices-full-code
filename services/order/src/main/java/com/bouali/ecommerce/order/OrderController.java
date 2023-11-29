@@ -1,6 +1,8 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
 import java.util.List;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +21,7 @@ public class OrderController {
 
   @PostMapping
   public ResponseEntity<Integer> createOrder(
-      @RequestBody OrderRequest request
+      @RequestBody @Valid OrderRequest request
   ) {
     return ResponseEntity.ok(this.service.createOrder(request));
   }

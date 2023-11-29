@@ -1,4 +1,4 @@
-package com.bouali.order;
+package com.bouali.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

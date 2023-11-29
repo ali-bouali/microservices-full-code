@@ -1,4 +1,4 @@
-package com.bouali.order.order;
+package com.bouali.ecommerce.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
