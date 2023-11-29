@@ -1,10 +1,10 @@
-package com.bouali.shipping;
+package com.bouali.ecommerce;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShippingApplicationTests {
+class ProductApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.bouali.shipping;
+package com.bouali.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShippingApplication {
+public class ProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShippingApplication.class, args);
+		SpringApplication.run(ProductApplication.class, args);
 	}
 
 }
