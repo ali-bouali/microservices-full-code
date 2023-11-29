@@ -1,4 +1,4 @@
-package com.alibou.customer;
+package com.alibou.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

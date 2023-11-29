@@ -1,4 +1,4 @@
-package com.alibou.customer.app;
+package com.alibou.ecommerce.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +16,8 @@ public class Customer {
 
   @Id
   private String id;
-  private String name;
+  private String firstname;
+  private String lastname;
   private String email;
-  private int age;
+  private Address address;
 }

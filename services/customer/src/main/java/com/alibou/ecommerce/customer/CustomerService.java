@@ -1,7 +1,6 @@
-package com.alibou.customer.app;
+package com.alibou.ecommerce.customer;
 
-import com.alibou.customer.exception.CustomerNotFoundException;
-import com.alibou.customer.validator.CustomerValidator;
+import com.alibou.ecommerce.exception.CustomerNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -13,17 +12,14 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
 
   private final CustomerRepository repository;
-  private final CustomerValidator<CustomerRequest> validator;
   private final CustomerMapper mapper;
 
   public String createCustomer(CustomerRequest request) {
-    this.validator.validate(request);
     var customer = this.repository.save(mapper.toCustomer(request));
     return customer.getId();
   }
 
   public void updateCustomer(CustomerRequest request) {
-    this.validator.validate(request);
     var customer = this.repository.findById(request.id())
         .orElseThrow(() -> new CustomerNotFoundException(
             String.format("Cannot update customer:: No customer found with the provided ID: %s", request.id())
@@ -33,13 +29,15 @@ public class CustomerService {
   }
 
   private void mergeCustomer(Customer customer, CustomerRequest request) {
-    if (StringUtils.isNotBlank(request.name())) {
-      customer.setName(request.name());
+    if (StringUtils.isNotBlank(request.firstname())) {
+      customer.setFirstname(request.firstname());
     }
     if (StringUtils.isNotBlank(request.email())) {
       customer.setEmail(request.email());
     }
-    customer.setAge(request.age());
+    if (request.address() != null) {
+      customer.setAddress(request.address());
+    }
   }
 
   public List<CustomerResponse> findAllCustomers() {

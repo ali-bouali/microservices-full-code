@@ -1,6 +1,8 @@
-package com.alibou.customer.app;
+package com.alibou.ecommerce.customer;
 
 import java.util.List;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,14 +23,14 @@ public class CustomerController {
 
   @PostMapping
   public ResponseEntity<String> createCustomer(
-      @RequestBody CustomerRequest request
+      @RequestBody @Valid CustomerRequest request
   ) {
     return ResponseEntity.ok(this.service.createCustomer(request));
   }
 
   @PutMapping
   public ResponseEntity<Void> updateCustomer(
-      @RequestBody CustomerRequest request
+      @RequestBody @Valid CustomerRequest request
   ) {
     this.service.updateCustomer(request);
     return ResponseEntity.accepted().build();

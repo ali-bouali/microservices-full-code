@@ -1,4 +1,4 @@
-package com.alibou.customer.exception;
+package com.alibou.ecommerce.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

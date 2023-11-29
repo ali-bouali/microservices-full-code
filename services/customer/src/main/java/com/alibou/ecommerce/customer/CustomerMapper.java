@@ -1,4 +1,4 @@
-package com.alibou.customer.app;
+package com.alibou.ecommerce.customer;
 
 import org.springframework.stereotype.Component;
 
@@ -11,9 +11,10 @@ public class CustomerMapper {
     }
     return Customer.builder()
         .id(request.id())
-        .name(request.name())
+        .firstname(request.firstname())
+        .lastname(request.lastname())
         .email(request.email())
-        .age(request.age())
+        .address(request.address())
         .build();
   }
 
@@ -23,9 +24,9 @@ public class CustomerMapper {
     }
     return new CustomerResponse(
         customer.getId(),
-        customer.getName(),
+        customer.getFirstname(),
         customer.getEmail(),
-        customer.getAge()
+        customer.getAddress()
     );
   }
 }

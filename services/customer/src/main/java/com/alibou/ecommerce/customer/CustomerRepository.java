@@ -1,4 +1,4 @@
-package com.alibou.customer.app;
+package com.alibou.ecommerce.customer;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
