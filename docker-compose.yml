@@ -1,9 +1,6 @@
-version: "3.8"
-
-
 services:
   postgresql:
-    container_name: postgresql
+    container_name: ms_pg_sql
     image: postgres
     environment:
       POSTGRES_USER: alibou
@@ -18,7 +15,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin
+    container_name: ms_pgadmin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
@@ -39,20 +36,6 @@ services:
       - "9411:9411"
     networks:
       - microservices-net
-
-  rabbitmq:
-    container_name: rabbitmq
-    image: rabbitmq:3.11.17-management-alpine
-    environment:
-      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
-      RABBITMQ_DEFAULT_USER: alibou
-      RABBITMQ_DEFAULT_PASS: alibou
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    networks:
-      - microservices-net
-
 
   mongodb:
     image: mongo
@@ -75,6 +58,32 @@ services:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=alibou
       - ME_CONFIG_MONGODB_ADMINPASSWORD=alibou
       - ME_CONFIG_MONGODB_SERVER=mongodb
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_SERVER_ID: 1
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "22181:2181"
+    networks:
+      - microservices-net
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: ms_kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+    networks:
+      - microservices-net
 
 networks:
   microservices-net:
