@@ -3,17 +3,17 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/shipping
+    url: jdbc:postgresql://localhost:5432/product
     username: alibou
     password: alibou
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     baseline-on-migrate: true
-    enabled: false
+    enabled: true
     baseline-description: "init"
     baseline-version: 0
     user: ${spring.datasource.username}

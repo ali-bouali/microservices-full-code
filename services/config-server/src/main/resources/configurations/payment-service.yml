@@ -12,11 +12,11 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: alibou
-    password: alibou
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 application:
   config:
-    shipping-url: http://localhost:8090/api/v1/shippings
+    product-url: http://localhost:8222/api/v1/products
