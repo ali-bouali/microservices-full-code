@@ -1,5 +1,6 @@
-package com.bouali.payment.payment;
+package com.bouali.ecommerce.payment;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ public class PaymentController {
 
   @PostMapping
   public ResponseEntity<Integer> createPayment(
-      @RequestBody PaymentRequest request
+      @RequestBody @Valid PaymentRequest request
   ) {
     return ResponseEntity.ok(this.service.createPayment(request));
   }

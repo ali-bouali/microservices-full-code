@@ -1,4 +1,4 @@
-package com.bouali.payment.exception;
+package com.bouali.ecommerce.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

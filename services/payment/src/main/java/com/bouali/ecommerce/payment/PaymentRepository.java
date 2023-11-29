@@ -1,4 +1,4 @@
-package com.bouali.payment.payment;
+package com.bouali.ecommerce.payment;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.bouali.payment.payment;
+package com.bouali.ecommerce.payment;
 
 public enum PaymentMethod {
 
