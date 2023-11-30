@@ -1,7 +1,7 @@
 package com.bouali.ecommerce.payment;
 
 import com.bouali.ecommerce.notification.NotificationProducer;
-import com.bouali.ecommerce.notification.NotificationRequest;
+import com.bouali.ecommerce.notification.PaymentNotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,15 @@ public class PaymentService {
 
   public Integer createPayment(PaymentRequest request) {
     var payment = this.repository.save(this.mapper.toPayment(request));
+
     this.notificationProducer.sendNotification(
-            new NotificationRequest(
+            new PaymentNotificationRequest(
+                    request.orderReference(),
                     request.amount(),
-                    request.paymentMethod()
+                    request.paymentMethod(),
+                    request.customer().firstname(),
+                    request.customer().lastname(),
+                    request.customer().email()
             )
     );
     return payment.getId();
