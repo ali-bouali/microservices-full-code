@@ -32,4 +32,14 @@ public class ProductMapper {
                 product.getCategory().getDescription()
         );
     }
+
+    public ProductPurchaseResponse toproductPurchaseResponse(Product product, double quantity) {
+        return new ProductPurchaseResponse(
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice(),
+                quantity
+        );
+    }
 }

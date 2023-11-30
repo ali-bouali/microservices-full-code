@@ -27,11 +27,10 @@ public class ProductController {
     }
 
     @PostMapping("/purchase")
-    public ResponseEntity<?> purchaseProducts(
+    public ResponseEntity<List<ProductPurchaseResponse>> purchaseProducts(
             @RequestBody List<ProductPurchaseRequest> request
     ) {
-        service.purchaseProducts(request);
-        return ResponseEntity.accepted().build();
+        return ResponseEntity.ok(service.purchaseProducts(request));
     }
 
     @GetMapping("/{product-id}")
