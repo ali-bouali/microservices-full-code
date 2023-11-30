@@ -1,7 +1,9 @@
 package com.bouali.ecommerce.product;
 
+import com.bouali.ecommerce.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -22,26 +24,24 @@ public class ProductClient {
     private String productUrl;
     private final RestTemplate restTemplate;
 
-    public void purchaseProducts(List<PurchaseRequest> requestBody) {
+    public List<PurchaseResponse> purchaseProducts(List<PurchaseRequest> requestBody) {
         HttpHeaders headers = new HttpHeaders();
         headers.set(CONTENT_TYPE, APPLICATION_JSON_VALUE);
 
         HttpEntity<List<PurchaseRequest>> requestEntity = new HttpEntity<>(requestBody, headers);
+        ParameterizedTypeReference<List<PurchaseResponse>> responseType = new ParameterizedTypeReference<>() {
+        };
+        ResponseEntity<List<PurchaseResponse>> responseEntity = restTemplate.exchange(
+                productUrl + "/purchase",
+                POST,
+                requestEntity,
+                responseType
+        );
 
-        try {
-            ResponseEntity<Void> responseEntity = restTemplate.exchange(
-                    productUrl + "/purchase",
-                    POST,
-                    requestEntity,
-                    Void.class
-            );
-
-            if (responseEntity.getStatusCode().isError()) {
-                throw new RuntimeException("Non-2xx response received: " + responseEntity.getStatusCode());
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("Error while making the POST request", e);
+        if (responseEntity.getStatusCode().isError()) {
+            throw new BusinessException("An error occurred while processing the products purchase: " + responseEntity.getStatusCode());
         }
+        return  responseEntity.getBody();
     }
 
 }
