@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-28T12:46:50.022Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="qeV6lggXj0vZM6tVt1vZ" version="22.0.3" type="device" pages="6">
+<mxfile host="Electron" modified="2023-11-30T15:19:03.512Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="5DWDUuMq8wZRccYh1esy" version="22.0.3" type="device" pages="6">
   <diagram id="VbmSNMpitOyS2P8errUJ" name="global-architecture">
-    <mxGraphModel dx="1704" dy="776" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2763" dy="971" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,7 +82,7 @@
           <mxGeometry x="4" y="2.7333333333333334" width="20.541" height="18.45" as="geometry" />
         </mxCell>
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-14" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://static-00.iconduck.com/assets.00/kafka-icon-2048x935-cvu4503l.png;imageBorder=none;perimeterSpacing=0;" vertex="1" parent="1">
-          <mxGeometry x="1028" y="279" width="77.75" height="35.5" as="geometry" />
+          <mxGeometry x="1054" y="274" width="77.75" height="35.5" as="geometry" />
         </mxCell>
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-15" value="Message Broker" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=90;horizontal=0;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="1081" y="274.5" width="59" height="139" as="geometry" />
@@ -149,15 +149,6 @@
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-41" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.ctfassets.net/gt6dp23g0g38/5DqlQtFKecFlkqQ8YGDT2p/aa945b648f44dd872e9a1b89f7d203ef/springboot.png;" vertex="1" parent="xCOBlcEBNlZvq0qhSWPW-39">
           <mxGeometry x="4" y="3.1333333333333333" width="23.546999999999997" height="21.15" as="geometry" />
         </mxCell>
-        <mxCell id="xCOBlcEBNlZvq0qhSWPW-43" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="722" y="133.68" width="50.120000000000005" height="57.64852490606316" as="geometry" />
-        </mxCell>
-        <mxCell id="xCOBlcEBNlZvq0qhSWPW-44" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Database-postgres.svg/1448px-Database-postgres.svg.png;container=0;" vertex="1" parent="xCOBlcEBNlZvq0qhSWPW-43">
-          <mxGeometry x="13.99735211811253" width="36.12264788188748" height="51.04120428447361" as="geometry" />
-        </mxCell>
-        <mxCell id="xCOBlcEBNlZvq0qhSWPW-45" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Docker.svg;fillColor=none;container=0;" vertex="1" parent="xCOBlcEBNlZvq0qhSWPW-43">
-          <mxGeometry y="36.67969348659003" width="25.571745633503813" height="20.968831419473126" as="geometry" />
-        </mxCell>
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-46" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="785.94" y="213" width="50.120000000000005" height="57.64852490606316" as="geometry" />
         </mxCell>
@@ -176,8 +167,10 @@
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-51" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Docker.svg;fillColor=none;container=0;" vertex="1" parent="xCOBlcEBNlZvq0qhSWPW-49">
           <mxGeometry y="36.67969348659003" width="25.571745633503813" height="20.968831419473126" as="geometry" />
         </mxCell>
-        <mxCell id="xCOBlcEBNlZvq0qhSWPW-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;flowAnimation=1;" edge="1" parent="1" source="xCOBlcEBNlZvq0qhSWPW-1" target="xCOBlcEBNlZvq0qhSWPW-44">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="xCOBlcEBNlZvq0qhSWPW-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;flowAnimation=1;" edge="1" parent="1" source="xCOBlcEBNlZvq0qhSWPW-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735.9973521181128" y="159.24" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;flowAnimation=1;" edge="1" parent="1" source="xCOBlcEBNlZvq0qhSWPW-9" target="xCOBlcEBNlZvq0qhSWPW-47">
           <mxGeometry relative="1" as="geometry" />
@@ -248,11 +241,14 @@
         <mxCell id="rKu08YaNow4kpiejSnou-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png;clipPath=inset(11.67% 12.33% 7.67% 12%);" vertex="1" parent="1">
           <mxGeometry x="-9" y="324.25" width="50.18" height="53.5" as="geometry" />
         </mxCell>
+        <mxCell id="vR1Pq6dqCtEIYChafSH1-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png;" vertex="1" parent="1">
+          <mxGeometry x="730.1799999999998" y="128" width="55.76" height="75" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="FYrnJrQARu1fBFtOPtaL" name="class-diagram">
-    <mxGraphModel dx="1356" dy="969" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1881" dy="943" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
