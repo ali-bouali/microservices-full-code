@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-10T09:11:06.673Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="zuyEfzYGwQEO0HbN1EQa" version="22.0.3" type="device" pages="6">
+<mxfile host="Electron" modified="2024-05-10T09:30:15.749Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="WBG_mK3jHS5_HccE57bm" version="22.0.3" type="device" pages="6">
   <diagram id="VbmSNMpitOyS2P8errUJ" name="global-architecture">
     <mxGraphModel dx="1828" dy="1237" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -43,7 +43,7 @@
             <mxPoint x="403" y="351" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8Op4M2FmP5w4KHeaY0xA-5" value="/products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8Op4M2FmP5w4KHeaY0xA-4" vertex="1" connectable="0">
+        <mxCell id="8Op4M2FmP5w4KHeaY0xA-5" value="/products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="8Op4M2FmP5w4KHeaY0xA-4" vertex="1" connectable="0">
           <mxGeometry x="0.2865" y="1" relative="1" as="geometry">
             <mxPoint x="-50" y="-1" as="offset" />
           </mxGeometry>
@@ -230,7 +230,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FYrnJrQARu1fBFtOPtaL" name="class-diagram">
-    <mxGraphModel dx="2471" dy="1614" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1497" dy="943" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -376,7 +376,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="domain-class-diagram" id="mql5I4AHV_EOIbO-FXmZ">
-    <mxGraphModel dx="2471" dy="1614" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1764" dy="1075" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="QaSKw-nrApPyZHBpUXGP-0" />
         <mxCell id="QaSKw-nrApPyZHBpUXGP-1" parent="QaSKw-nrApPyZHBpUXGP-0" />
@@ -537,7 +537,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="WqBAav9LYGF2_vxLiK12" name="async-communication">
-    <mxGraphModel dx="2471" dy="1614" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1301" dy="846" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
