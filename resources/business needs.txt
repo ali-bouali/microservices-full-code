@@ -2,7 +2,7 @@ As a business owner in the e-commerce sector, I am currently operating without t
 My product line consists of a variety of items, each identified by a unique code and accompanied by a detailed description.
 
 Customers interact with my business by placing orders from this list of products.
-I identify my customers using their first name, last name, and email address.
+I identify my customers using their first name, last name, email and address.
 Each customer transaction involves a specific payment method.
 Upon the completion of a successful payment transaction, I take the responsibility to inform the customer via an email, confirming
 the success of their payment or conversely, notifying them of any payment failures.
