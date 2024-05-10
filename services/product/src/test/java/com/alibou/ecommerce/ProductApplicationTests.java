@@ -1,10 +1,10 @@
-package com.bouali.ecommerce;
+package com.alibou.ecommerce;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PaymentApplicationTests {
+class ProductApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -17,7 +17,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring.json.type.mapping: orderConfirmation:com.bouali.ecommerce.kafka.OrderConfirmation
+        spring.json.type.mapping: orderConfirmation:com.alibou.ecommerce.kafka.OrderConfirmation
 
 application:
   config:
